@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="xMidYMid meet" data-bbox="19.9 19.9 160.2 160.2" viewBox="19.9 19.9 160.2 160.2" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img" aria-label="Главная">
+    <defs>
+        <style>#comp-kr8tvwgd svg [data-color="1"] {fill: #FFFFFF;}</style>
+    </defs>
+    <g>
+        <path fill="#FFFFFF" d="M144.2 100c0 24.411-19.789 44.2-44.2 44.2S55.8 124.411 55.8 100 75.589 55.8 100 55.8s44.2 19.789 44.2 44.2z"></path>
+        <path d="M100 19.9c-44.2 0-80.1 35.9-80.1 80.1s35.9 80.1 80.1 80.1 80.1-35.9 80.1-80.1-35.9-80.1-80.1-80.1zm0 146.4c-36.6 0-66.3-29.7-66.3-66.3S63.4 33.7 100 33.7s66.3 29.7 66.3 66.3-29.7 66.3-66.3 66.3z" fill="#FFFFFF"></path>
+    </g>
+</svg>

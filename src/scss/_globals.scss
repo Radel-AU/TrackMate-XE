@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: var(--background-color-black);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+
+a:hover {
+  color: var(--color-purple);
+}

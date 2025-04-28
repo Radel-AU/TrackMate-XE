@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackMate</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/css/normalize.css">
+    <script src="./main.js" type="module" defer ></script>
+</head>
+<body>
+    <div class="background-top">
+        <header class="header" style="position: sticky; top: 0px;">
+            <div class="container header__container">
+                <div class="logo--block">
+                    <a href="/" class="logo--link">TrackMate</a>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="/" class="menu__questions">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/" class="menu__login">Войти</a>
+                        </li>
+                        <li class="menu__item">
+                            <button class="menu__button-basket button" data-action-basket>
+                                <div class="menu__basket"></div>
+                            </button>
+                        </li>
+                        <li class="menu__item">
+                            <button class="button button-main button-main--small" type="button">Купить</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="sidebar">
+                <div class="sidebar__header">
+                    <h2 class="sidebar__title">Корзина</h2>
+                    <p>(<span data-products-quantity="0">0 </span>товара)</p>
+                    <button class="sidebar__button-cross button" data-close-basket>
+                        <div class="sidebar__cross"></div>
+                    </button>
+                </div>
+                <div class="sidebar__content">
+                    <div class="sidebar__products products">
+                        <!--                    <ul class="products__list">-->
+                        <!--                        <li class="products__item"></li>-->
+                        <!--                    </ul>-->
+                    </div>
+                </div>
+                <div class="sidebar__footer">
+                    <div class="sidebar__total-sum">
+                        <p class="sidebar__sum-text">Сумма</p>
+                        <p class="sidebar__sum-text">0,00₽</p>
+                    </div>
+                    <button class="sidebar__button--purple button" type="button">Оформление заказа</button>
+                    <button class="sidebar__button--white button" type="button">Смотреть корзину</button>
+                </div>
+            </div>
+        <div class="banner">
+            <div class="container">
+            </div>
+        </div>
+    </div>
+    <main class="main"></main>
+</body>
+</html>

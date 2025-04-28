@@ -1,0 +1,241 @@
+:root {
+  --shadow-button-purple: 0.00px 1.00px 20px 0px rgba(125, 43, 196, 1);
+  --background-button-purple: rgb(152, 73, 222);
+  --color-purple: rgba(125, 43, 196, 1);
+  --background-color-black: rgb(35, 35, 35);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: var(--background-color-black);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+
+a:hover {
+  color: var(--color-purple);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: 0.4s;
+}
+.button-main {
+  border-radius: 25px;
+  color: white;
+  background-color: var(--background-button-purple);
+  box-shadow: var(--shadow-button-purple);
+}
+.button-main:hover {
+  color: var(--color-purple);
+  background-color: white;
+  box-shadow: 0px 1px 20px 0px rgb(219, 191, 241);
+}
+.button-main--small {
+  height: 40px;
+  width: 130px;
+}
+
+.container {
+  display: flex;
+  padding-inline: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.menu__basket {
+  position: relative;
+}
+.menu__basket:before {
+  content: " ";
+  position: absolute;
+  z-index: 100;
+  top: -12.5px;
+  left: -12.5px;
+  height: 25px;
+  width: 25px;
+  color: white;
+  transition-duration: 0.4s;
+  background: url("./src/icon/basket.svg") center/contain no-repeat;
+}
+.menu__basket:hover::before {
+  background: url("./src/icon/basket-hover-purple.svg") center/contain no-repeat;
+}
+
+.header__container {
+  height: 83px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+
+.background-top {
+  background: linear-gradient(143deg, rgb(105, 54, 101) 0%, rgba(86, 47, 80, 0.92) 0%, rgb(35, 35, 35) 15%, rgb(35, 35, 35) 98%);
+}
+
+.banner {
+  height: 100vh;
+}
+
+.logo--block {
+  position: relative;
+}
+.logo--block::before {
+  content: " ";
+  position: absolute;
+  z-index: 100;
+  top: 7.5px;
+  left: -35px;
+  height: 25px;
+  width: 25px;
+  color: white;
+  transition-duration: 0.4s;
+  background: url("./src/icon/logo-icon.svg") center/contain no-repeat;
+}
+.logo--block:hover::before {
+  transition: 0.4s;
+  content: "";
+  background: url("./src/icon/logo-icon-hover-purple.svg") center/contain no-repeat;
+}
+
+.logo--link {
+  font-size: 27px;
+  line-height: 1.5em;
+}
+
+.sidebar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  z-index: 100;
+  top: 100px;
+  height: 75%;
+  width: 420px;
+  opacity: 0;
+  font-family: helvetica-w01-roman;
+  background-color: black;
+}
+.sidebar__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  color: black;
+  background-color: white;
+}
+.sidebar__title {
+  font-size: 23px;
+  font-weight: 400;
+}
+.sidebar__cross {
+  position: absolute;
+  right: 50px;
+}
+.sidebar__cross:hover:before {
+  background: url("./src/icon/cross-hover-gray.svg") center/contain no-repeat;
+}
+.sidebar__cross:before {
+  content: " ";
+  position: absolute;
+  z-index: 100;
+  top: -12.5px;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  color: white;
+  transition-duration: 0.4s;
+  background: url("./src/icon/cross.svg") center/contain no-repeat;
+}
+.sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  padding: 20px;
+  bottom: 0px;
+  left: 0;
+  height: 180px;
+  width: 100%;
+}
+.sidebar__total-sum {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar__sum-text {
+  font-size: 20px;
+}
+.sidebar button:not(.sidebar__button-cross) {
+  height: 42px;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.sidebar__button--purple {
+  color: white;
+  background-color: var(--background-button-purple);
+  border: 1px solid var(--color-purple);
+}
+.sidebar__button--purple:hover {
+  background-color: rgb(112, 54, 164);
+}
+.sidebar__button--white {
+  color: var(--color-purple);
+  background-color: white;
+  border: 1px solid var(--color-purple);
+}
+.sidebar__button--white:hover {
+  background-color: #ffdaff;
+}
+
+.sidebar.sidebar-active {
+  animation: 1s sidebar-active ease;
+  opacity: 1;
+}
+
+.sidebar-not-active {
+  animation: 1s sidebar-not-active ease;
+}
+
+@keyframes sidebar-active {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes sidebar-not-active {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

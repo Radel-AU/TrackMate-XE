@@ -1,0 +1,28 @@
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+  &__item {
+
+  }
+  &__basket {
+    position: relative;
+  }
+  &__basket:before {
+    content: " ";
+    position: absolute;
+    z-index: 100;
+    top: -12.5px;
+    left: -12.5px;
+    height: 25px;
+    width: 25px;
+    color: white;
+    transition-duration: 0.4s;
+    background: url("./src/icon/basket.svg")  center / contain no-repeat;
+  }
+  &__basket:hover::before {
+    background: url("./src/icon/basket-hover-purple.svg")  center / contain no-repeat;
+  }
+}
