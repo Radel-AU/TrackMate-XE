@@ -1,0 +1,16 @@
+.watch-functions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__icon {
+    height: 70px;
+    width: 70px;
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    font-family: helvetica-w01-roman;
+  }
+}
+

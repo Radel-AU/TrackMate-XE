@@ -1,0 +1,6 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: clamp(280px, 52vw, 478px);
+}

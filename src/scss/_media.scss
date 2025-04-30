@@ -1,0 +1,36 @@
+@media (max-width: 1050px) {
+  .menu {
+    &__list {
+      gap: 15px;
+    }
+  }
+  .banner {
+    &__content {
+      left: 0;
+    }
+  }
+  .workout-tracking {
+    &__img-devices {
+      display:none;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .banner__block-img {
+    height: 300px;
+    width: 300px;
+  }
+  .content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar {
+    width: 100vw;
+  }
+  .watch-functions {
+    gap: 10px;
+  }
+}

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="background-top">
-        <header class="header" style="position: sticky; top: 0px;">
+        <header data-header-sticky class="header" style="top: 0px;">
             <div class="container header__container">
                 <div class="logo--block">
                     <a href="/" class="logo--link">TrackMate</a>
@@ -35,7 +35,7 @@
                 </nav>
             </div>
         </header>
-        <div class="sidebar">
+        <div class="sidebar visually-hidden">
                 <div class="sidebar__header">
                     <h2 class="sidebar__title">Корзина</h2>
                     <p>(<span data-products-quantity="0">0 </span>товара)</p>
@@ -59,11 +59,40 @@
                     <button class="sidebar__button--white button" type="button">Смотреть корзину</button>
                 </div>
             </div>
-        <div class="banner">
-            <div class="container">
+        <section class="banner">
+            <div class="container banner__container">
+                <div class="banner__content">
+                    <p class="banner__text">Контролируй свое здоровье</p>
+                    <h1 class="title title--big">0.4 TrackMate XE</h1>
+                    <p class="banner__text">Фитнес-трекер, который мотивирует</p>
+                    <button class="button button-main">Купить</button>
+                </div>
+                <div class="banner__img-wrapper">
+<!--                    <img src="./src/img/banner-watch.png" alt=" " class="banner__watch-img">-->
+                </div>
             </div>
-        </div>
+        </section>
     </div>
-    <main class="main"></main>
+    <main class="main">
+        <section class="workout-tracking">
+            <div class="container workout-tracking__container">
+                <div class="workout-tracking__wrapper-content">
+                    <div class="workout-tracking__content content">
+                        <div class="watch-functions">
+                            <img src="./src/icon/icon-black-1.png" alt="icon dumbbells" class="watch-functions__icon">
+                            <p class="watch-functions__text">отслеживание тренировок</p>
+                        </div>
+                        <h2 class="title title--primary">Точная статистика эффективности тренировок</h2>
+                        <p class="subtitle">Это текст. Нажмите и выберите «Редактировать текст» или нажмите дважды, чтобы добавить свой текст и настроить шрифт. Расскажите посетителям о себе.Я хз зачем я это скопировал</p>
+                    </div>
+                    <div class="workout-tracking__img-wrapper">
+                        <img src="./src/img/devices.png" alt="devices" class="workout-tracking__img-devices">
+                    </div>
+                </div>
+                <div class="workout-tracking__first-background"></div>
+                <div class="workout-tracking__second-background"></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

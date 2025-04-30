@@ -1,0 +1,15 @@
+.title {
+  font-weight: 500;
+  &--big {
+    font-size:  clamp(33px, 7vw, 75px);
+  }
+  &--primary {
+    line-height: clamp(40px, 6vw, 60px);
+    font-size: clamp(30px, 5.2vw, 50px);
+  }
+}
+
+.subtitle {
+  font-family: helvetica-w01-roman;
+  font-size: 17px;
+}

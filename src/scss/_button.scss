@@ -6,6 +6,8 @@
   transition: 0.4s;
   &-main {
     border-radius: 25px;
+    height: 45px;
+    width: 165px;
     color: white;
     background-color: var(--background-button-purple);
     box-shadow: var(--shadow-button-purple);
