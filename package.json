@@ -1,5 +1,5 @@
 {
-  "name": "npm",
+  "name": "trackmate-xe",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Radel-AU/projects-template.git"
+    "url": "git+https://github.com/Radel-AU/TrackMate-XE.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Radel-AU/projects-template/issues"
+    "url": "https://github.com/Radel-AU/TrackMate-XE/issues"
   },
-  "homepage": "https://github.com/Radel-AU/projects-template#readme",
+  "homepage": "https://github.com/Radel-AU/TrackMate-XE#readme",
   "description": "",
-  "devDependencies": {
-    "@eslint/js": "^9.24.0"
+  "dependencies": {
+    "live-server": "^1.2.0"
   }
 }

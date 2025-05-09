@@ -7,6 +7,10 @@
     line-height: clamp(40px, 6vw, 60px);
     font-size: clamp(30px, 5.2vw, 50px);
   }
+  &--small {
+    line-height: clamp(40px, 6vw, 60px);
+    font-size: clamp(30px, 4.5vw, 40px);
+  }
 }
 
 .subtitle {

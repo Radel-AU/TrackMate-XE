@@ -4,14 +4,49 @@
       gap: 15px;
     }
   }
+
+  .header {
+    &__container {
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+
   .banner {
     &__content {
-      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0px 100px 100px rgba(0, 0, 0, 0.4);
     }
   }
   .workout-tracking {
+    &__container {
+      padding-inline: 0;
+      gap: 0;
+    }
+
+    &__first-background {
+      width: 100%;
+    }
+    &__second-background {
+      display: none;
+    }
     &__img-devices {
       display:none;
+    }
+  }
+}
+
+@media (max-width: 905px) {
+  .product {
+    &__container {
+      gap: 40px;
+    }
+    &__view {
+      align-items: center;
+      .model__img {
+        height: 320px;
+        width: 320px;
+      }
     }
   }
 }

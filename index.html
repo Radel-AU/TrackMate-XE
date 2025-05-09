@@ -9,71 +9,93 @@
     <script src="./main.js" type="module" defer ></script>
 </head>
 <body>
-    <div class="background-top">
-        <header data-header-sticky class="header" style="top: 0px;">
-            <div class="container header__container">
-                <div class="logo--block">
-                    <a href="/" class="logo--link">TrackMate</a>
-                </div>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="/" class="menu__questions">Вопросы и ответы</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/" class="menu__login">Войти</a>
-                        </li>
-                        <li class="menu__item">
-                            <button class="menu__button-basket button" data-action-basket>
-                                <div class="menu__basket"></div>
-                            </button>
-                        </li>
-                        <li class="menu__item">
-                            <button class="button button-main button-main--small" type="button">Купить</button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="sidebar visually-hidden">
-                <div class="sidebar__header">
-                    <h2 class="sidebar__title">Корзина</h2>
-                    <p>(<span data-products-quantity="0">0 </span>товара)</p>
-                    <button class="sidebar__button-cross button" data-close-basket>
-                        <div class="sidebar__cross"></div>
+    <header data-header-sticky class="header" style="top: 0px;">
+    <div class="container header__container">
+        <div class="logo--block">
+            <a href="/" class="logo--link" data-back-main>TrackMate</a>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="/" class="menu__questions">Вопросы и ответы</a>
+                </li>
+                <li class="menu__item">
+                    <a href="/" class="menu__login">Войти</a>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__button-basket button" data-action-basket>
+                        <div class="menu__basket"></div>
                     </button>
-                </div>
-                <div class="sidebar__content">
-                    <div class="sidebar__products products">
-                        <!--                    <ul class="products__list">-->
-                        <!--                        <li class="products__item"></li>-->
-                        <!--                    </ul>-->
-                    </div>
-                </div>
-                <div class="sidebar__footer">
-                    <div class="sidebar__total-sum">
-                        <p class="sidebar__sum-text">Сумма</p>
-                        <p class="sidebar__sum-text">0,00₽</p>
-                    </div>
-                    <button class="sidebar__button--purple button" type="button">Оформление заказа</button>
-                    <button class="sidebar__button--white button" type="button">Смотреть корзину</button>
-                </div>
+                </li>
+                <li class="menu__item">
+                    <button class="button button-main button-main--small" type="button" data-route="product">Купить</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <div class="sidebar visually-hidden">
+        <div class="sidebar__header">
+            <h2 class="sidebar__title">Корзина</h2>
+            <p class="sidebar__text">(<span data-products-quantity="0">0 </span>товара)</p>
+            <button class="sidebar__button-cross button" data-close-basket>
+                <div class="sidebar__cross"></div>
+            </button>
+        </div>
+        <div class="sidebar__content">
+            <div class="sidebar__products products">
+                <ul class="products__list">
+                    <li class="products__item">
+                        <div class="products__block-image">
+                            <img src="./src/img/watch-main-option-1.png" alt="watch" class="products__image">
+                        </div>
+                        <div class="products__description">
+                            <div class="products__header-part">
+                                <h2 class="title products__title">0.4 TrackMate XE</h2>
+                                <button class="button products__button" data-sidebar-product-delete style="width: 45px; background-color: transparent;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" style="fill: white !important;">
+                                        <path d="M13 3A1.0001 1.0001 0 0 0 11.986328 4L6 4A1.0001 1.0001 0 1 0 6 6L24 6A1.0001 1.0001 0 1 0 24 4L18.013672 4A1.0001 1.0001 0 0 0 17 3L13 3z M6 8L6 24C6 25.105 6.895 26 8 26L22 26C23.105 26 24 25.105 24 24L24 8L6 8z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="products__price-text" data-sidebar-product-price>2 500.00 ₽</p>
+                            <p class="products__select--text">Цвет <span data-sidebar-product-color="">Белый</span> *</p>
+                            <div class="products__footer-part">
+                                <div class="products__quantity">
+                                    <p class="products__select--text">Количество: <span data-sidebar-product-quantity="">1</span></p>
+                                </div>
+                                <p class="products__price-text" data-sidebar-total-price="2500">2 500.00 ₽</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        <section class="banner">
-            <div class="container banner__container">
-                <div class="banner__content">
-                    <p class="banner__text">Контролируй свое здоровье</p>
-                    <h1 class="title title--big">0.4 TrackMate XE</h1>
-                    <p class="banner__text">Фитнес-трекер, который мотивирует</p>
-                    <button class="button button-main">Купить</button>
-                </div>
-                <div class="banner__img-wrapper">
-<!--                    <img src="./src/img/banner-watch.png" alt=" " class="banner__watch-img">-->
-                </div>
+        </div>
+        <div class="sidebar__footer">
+            <div class="sidebar__total-sum">
+                <p class="sidebar__sum-text">Сумма</p>
+                <p class="sidebar__sum-text">0,00₽</p>
             </div>
-        </section>
+            <button class="sidebar__button--purple button" type="button">Оформление заказа</button>
+            <button class="sidebar__button--white button" type="button" data-route="cart">Смотреть корзину</button>
+        </div>
     </div>
     <main class="main">
+        <div class="background-top">
+            <section class="banner">
+                <div class="container banner__container">
+                    <div class="banner__content">
+                        <p class="banner__text">Контролируй свое здоровье</p>
+                        <h1 class="title title--big">0.4 TrackMate XE</h1>
+                        <p class="banner__text">Фитнес-трекер, который мотивирует</p>
+                        <button class="button button-main" type="button" data-route="product">Купить</button>
+                    </div>
+                    <div class="banner__img-wrapper">
+                        <!--                    <img src="./src/img/banner-watch.png" alt=" " class="banner__watch-img">-->
+                    </div>
+                </div>
+            </section>
+        </div>
         <section class="workout-tracking">
             <div class="container workout-tracking__container">
                 <div class="workout-tracking__wrapper-content">
@@ -94,5 +116,70 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__navigation-menu navigation-menu">
+                <ul class="navigation-menu__list">
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link">Instagram</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link">Facebook</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link">Twitter</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link">Tiktok</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link">YouTube</a>
+                    </li>
+                </ul>
+                <ul class="navigation-menu__list">
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link" data-route="terms-and-use">Условия использования</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link" data-route="delivery-and-return">Доставка и возврат</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="/" class="navigation-menu__link" data-route="data-protection">Защита данных</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copyright copyright">
+                <p class="copyright__text">© 2035 TrackMate. Сайт создан на <a href="/">Wix.com</a></p>
+                <div class="footer__payment-methods payment-methods">
+                    <ul class="payment-methods__list">
+                        <li class="payment-methods__item">
+                            <img src="./src/img/visa.png" alt="Visa">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/mastercard.png" alt="Mastercard">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/unionpay.png" alt="UnionPay">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/jcb.png" alt="JCB">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/amex.png" alt="American Express">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/discover.png" alt="Discover">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/diners.png" alt="Diners Club">
+                        </li>
+                        <li class="payment-methods__item">
+                            <img src="./src/img/paypal.png" alt="PayPal">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

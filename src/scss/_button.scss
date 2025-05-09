@@ -11,14 +11,18 @@
     color: white;
     background-color: var(--background-button-purple);
     box-shadow: var(--shadow-button-purple);
+    &:hover{
+      color: var(--color-purple);
+      background-color: white;
+      box-shadow: 0.00px 1.00px 20px 0px rgb(219, 191, 241);
+    }
+    &--small {
+      height: 40px;
+      width: 130px;
+    }
+    &--big {
+      width: 100%;
+    }
   }
-  &-main:hover{
-    color: var(--color-purple);
-    background-color: white;
-    box-shadow: 0.00px 1.00px 20px 0px rgb(219, 191, 241);
-  }
-  &-main--small {
-    height: 40px;
-    width: 130px;
-  }
+
 }
