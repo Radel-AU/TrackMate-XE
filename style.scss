@@ -25,7 +25,7 @@
 }
 
 .main {
-  margin-bottom: 250px;
+  margin-bottom: 300px;
 }
 
 @keyframes headerSticky {
@@ -533,6 +533,75 @@
   }
   &__text {
     font-size: clamp(14px, 1.5vw, 17px);
+  }
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq {
+  position: relative;
+  top: 200px;
+  &__container {
+    margin: 0 auto;
+    padding-inline: 15px;
+    max-width: 900px;
+  }
+  &__title {
+    margin-bottom: 50px;
+    line-height: clamp(40px, 6vw, 60px);
+    font-size: clamp(25px, 5.2vw, 50px);
+  }
+  &__content {
+    @include flex-column();
+    gap: 40px;
+    width: 100%;
+  }
+  &__nav-section {
+    display: flex;
+    gap: 40px;
+  }
+  &__text {
+    &--active {
+      color: mediumpurple;
+    }
+  }
+  .chapter {
+    &__list {
+      @include flex-column();
+      gap: 20px;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition-duration: 0.2s;
+      padding-inline: 5px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &__cross {
+      font-size: 24px;
+    }
+    &__item {
+      @include flex-column();
+      gap: 20px;
+      gap: 20px;
+      &:after {
+        content: "";
+        width: 100%;
+        border-bottom: 1px solid mediumpurple;
+      }
+    }
+    &__title {
+      font-size: clamp(16px, 2.2vw, 20px);
+    }
+    &__text {
+      padding-inline: 15px;
+    }
   }
 }
 

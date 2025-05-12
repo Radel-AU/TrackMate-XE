@@ -12,15 +12,15 @@
     <header data-header-sticky class="header" style="top: 0px;">
     <div class="container header__container">
         <div class="logo--block">
-            <a href="/" class="logo--link" data-back-main>TrackMate</a>
+            <a href="/" class="logo--link" >TrackMate</a>
         </div>
         <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="/" class="menu__questions">Вопросы и ответы</a>
+                    <a href="/" class="menu__questions" data-route="questions">Вопросы и ответы</a>
                 </li>
                 <li class="menu__item">
-                    <a href="/" class="menu__login">Войти</a>
+                    <a href="/" class="menu__login" data-login>Войти</a>
                 </li>
                 <li class="menu__item">
                     <button class="menu__button-basket button" data-action-basket>
@@ -34,7 +34,7 @@
         </nav>
     </div>
 </header>
-    <div class="sidebar visually-hidden">
+    <aside class="sidebar visually-hidden">
         <div class="sidebar__header">
             <h2 class="sidebar__title">Корзина</h2>
             <p class="sidebar__text">(<span data-products-quantity="0">0 </span>товара)</p>
@@ -79,7 +79,7 @@
             <button class="sidebar__button--purple button" type="button">Оформление заказа</button>
             <button class="sidebar__button--white button" type="button" data-route="cart">Смотреть корзину</button>
         </div>
-    </div>
+    </aside>
     <main class="main">
         <div class="background-top">
             <section class="banner">
@@ -136,17 +136,19 @@
                         <a href="/" class="navigation-menu__link">YouTube</a>
                     </li>
                 </ul>
-                <ul class="navigation-menu__list">
-                    <li class="navigation-menu__item">
-                        <a href="/" class="navigation-menu__link" data-route="terms-and-use">Условия использования</a>
-                    </li>
-                    <li class="navigation-menu__item">
-                        <a href="/" class="navigation-menu__link" data-route="delivery-and-return">Доставка и возврат</a>
-                    </li>
-                    <li class="navigation-menu__item">
-                        <a href="/" class="navigation-menu__link" data-route="data-protection">Защита данных</a>
-                    </li>
-                </ul>
+                <nav>
+                    <ul class="navigation-menu__list">
+                        <li class="navigation-menu__item">
+                            <a href="/" class="navigation-menu__link" data-route="terms-and-use">Условия использования</a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="/" class="navigation-menu__link" data-route="delivery-and-return">Доставка и возврат</a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="/" class="navigation-menu__link" data-route="data-protection">Защита данных</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="footer__copyright copyright">
                 <p class="copyright__text">© 2035 TrackMate. Сайт создан на <a href="/">Wix.com</a></p>

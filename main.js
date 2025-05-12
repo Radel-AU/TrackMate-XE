@@ -275,6 +275,112 @@ class ActionBasket extends ActionProductCard{
 }
 new ActionBasket();
 
+// chapter question
+class QuestionPage {
+    constructor() {
+        this.onBind();
+    }
+
+    showDescription = (item) => {
+        const descriptionElement = item.querySelector(".chapter__text");
+        descriptionElement.classList.toggle("visually-hidden");
+    }
+
+    switchChapterQuestions = (event) => {
+        this.linkElements = document.querySelectorAll("[data-questions-section]");
+        this.linkElements.forEach(elem => {
+            elem.classList.remove("faq__text--active")
+        })
+        event.target.classList.add("faq__text--active");
+        this.chapterQuestionElement = document.querySelector(".faq__chapter");
+        this.loadChapterQuesiton(event.target.getAttribute("data-questions-section"));
+    }
+
+    loadChapterQuesiton = (views) => {
+        if(views === "all") {
+            this.viewChapterFirst();
+        }
+        if(views === "faq section") {
+            this.viewChapterSecond();
+        }
+    }
+
+    viewChapterFirst = () => {
+        this.chapterQuestionElement.innerHTML = `
+            <ul class="chapter__list">
+                <li class="chapter__item">
+                         <div class="chapter__header">
+                              <h3 class="chapter__title title">О чем раздел FAQ?</h3>
+                              <p class="chapter__cross">+</p>
+                         </div>
+                    <p class="chapter__text">Раздел FAQ содержит ответы на частые вопросы о вашем бизнесе, например, «В какие регионы вы доставляете?», «Какие у вас часы работы?» или «Как записаться на услугу?».</p>
+                </li>
+                <li class="chapter__item">
+                                <div class="chapter__header">
+                                    <h3 class="chapter__title title">Почему раздел с вопросами и ответами важен?</h3>
+                                    <p class="chapter__cross">+</p>
+                                </div>
+                     <p class="chapter__text visually-hidden">Раздел с вопросами и ответами — отличный способ для пользователей быстро найти интересующую их информацию и взаимодействовать с вашим бизнесом и сайтом более эффективно и удобно.</p>
+                </li>
+                <li class="chapter__item">
+                             <div class="chapter__header">
+                                    <h3 class="chapter__title title">Где можно добавить раздел FAQ?</h3>
+                                    <p class="chapter__cross">+</p>
+                                </div>
+                      <p class="chapter__text visually-hidden">Раздел можно добавить на любую страницу сайта или приложения Wix, для удобства пользователей.</p>
+               </li>
+            </ul>
+        `;
+    }
+    viewChapterSecond = () => {
+        this.chapterQuestionElement.innerHTML = `
+            <ul class="chapter__list">
+                <li class="chapter__item">
+                    <div class="chapter__header">
+                        <h3 class="chapter__title title">Как добавить новый вопрос и ответ?</h3>
+                        <p class="chapter__cross">+</p>
+                     </div>
+                    <p class="chapter__text">Чтобы добавить вопрос в раздел, выполните следующие шаги:</p>
+                </li>
+                <li class="chapter__item">
+                     <div class="chapter__header">
+                            <h3 class="chapter__title title">Можно ли вставить картинку, видео или GIF в раздел?</h3>
+                            <p class="chapter__cross">+</p>
+                     </div>
+                     <p class="chapter__text visually-hidden">Да. Чтобы добавить медиафайлы, выполните следующие шаги:</p>
+                </li>
+                <li class="chapter__item">
+                     <div class="chapter__header">
+                     <h3 class="chapter__title title">Как изменить или удалить название раздела с вопросами и ответами?</h3>
+                            <p class="chapter__cross">+</p>
+                     </div>
+                      <p class="chapter__text visually-hidden">
+                            Вы можете изменить название раздела из вкладки «Настройки» в редакторе.
+                            Чтобы удалить название раздела из мобильного приложения, перейдите в раздел «Сайт и моб.» в приложении Owner.
+                      </p>
+               </li>
+            </ul>
+        `;
+    }
+
+
+    onBind = () => {
+        document.addEventListener("click", (event) => {
+            if(event.target.closest("[data-questions-section]")) {
+                this.switchChapterQuestions(event);
+            }
+
+            if(event.target.closest(".chapter__item")) {
+                this.showDescription(event.target.closest(".chapter__item"));
+            }
+            if(event.target.closest("[data-questions-section]")) {
+                event.preventDefault();
+            }
+        })
+    }
+}
+new QuestionPage();
+
 document.addEventListener("click", (event) => {
     // back in to main page
     // if(event.target.closest('[href="/"]')) {
@@ -302,6 +408,34 @@ class switchPages {
         this.bindEvents();
     }
 
+    fadeIn = (elem) => {
+        let opacityWindow = 1;
+
+        const step = (elem) => {
+            if(opacityWindow > 0) {
+                elem.style.opacity = String(opacityWindow -= 0.05);
+            } else {
+                elem.style.opacity = 0;
+                clearInterval(idInterval);
+            }
+        }
+        const idInterval = setInterval( step, 25, elem);
+    }
+
+    fadeOut = (elem) => {
+        let opacityWindow = 0;
+
+        const step = () => {
+            if(opacityWindow < 1) {
+                elem.style.opacity = String(opacityWindow += 0.02);
+            } else {
+                elem.style.opacity = 1;
+                clearInterval(idInterval);
+            }
+        }
+        const idInterval = setInterval( step, 25, elem);
+    }
+
     loadPages = async (page) => {
         const response = await fetch(`./pages/${page}.html`);
         return await response.text();
@@ -319,21 +453,21 @@ class switchPages {
             '',
             event.target.getAttribute("data-route"),
         )
-        this.renderPages(event.target.getAttribute("data-route"));
         setTimeout(() => {
-            window.scrollTo({top:0, behavior: "smooth"})
+            this.renderPages(event.target.getAttribute("data-route"));
+            this.fadeOut(document.body);
+            window.scrollTo({top:0, behavior: "smooth"});
         }, 500)
     }
 
     bindEvents = () => {
         document.addEventListener("click", (event) => {
             if(event.target.matches("[data-route]")){
+                this.fadeIn(document.body);
                 this.switchToProductCard(event);
             }
         });
     }
 }
 new switchPages();
-
-
 

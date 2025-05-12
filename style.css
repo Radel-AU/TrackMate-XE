@@ -154,7 +154,7 @@ a:hover {
 }
 
 .main {
-  margin-bottom: 250px;
+  margin-bottom: 300px;
 }
 
 @keyframes headerSticky {
@@ -622,6 +622,69 @@ a:hover {
 }
 .working-conditions__text {
   font-size: clamp(14px, 1.5vw, 17px);
+}
+
+.faq {
+  position: relative;
+  top: 200px;
+}
+.faq__container {
+  margin: 0 auto;
+  padding-inline: 15px;
+  max-width: 900px;
+}
+.faq__title {
+  margin-bottom: 50px;
+  line-height: clamp(40px, 6vw, 60px);
+  font-size: clamp(25px, 5.2vw, 50px);
+}
+.faq__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+.faq__nav-section {
+  display: flex;
+  gap: 40px;
+}
+.faq__text--active {
+  color: mediumpurple;
+}
+.faq .chapter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq .chapter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+  padding-inline: 5px;
+}
+.faq .chapter__header:hover {
+  opacity: 0.8;
+}
+.faq .chapter__cross {
+  font-size: 24px;
+}
+.faq .chapter__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  gap: 20px;
+}
+.faq .chapter__item:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid mediumpurple;
+}
+.faq .chapter__title {
+  font-size: clamp(16px, 2.2vw, 20px);
+}
+.faq .chapter__text {
+  padding-inline: 15px;
 }
 
 @media (max-width: 1050px) {
